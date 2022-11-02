@@ -1,0 +1,8 @@
+<!-- Test Launch -->
+<launch>
+    <include file="$(find topic_publishtests)/launch/publish_topics.launch" />
+	<arg name="config_path" default="$(find topic_publishtests)/config/topic_configs.yaml" />
+    <test name="publishtest" test-name="publishtest" pkg="rostest" type="publishtest">
+        <rosparam command="load" file="$(arg config_path)" />
+    </test>
+</launch>

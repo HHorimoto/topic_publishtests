@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="topic_publishtests" name="talker" type="talker.py"/>
+    <node pkg="topic_publishtests" name="teleop" type="teleop.py"/>
+</launch>
